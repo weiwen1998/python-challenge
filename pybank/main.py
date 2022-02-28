@@ -1,7 +1,7 @@
 import os
 import csv
 
-csvpath = os.path.join('..','pybank','budget_data.csv')
+csvpath = os.path.join('Resources','budget_data.csv')
 
 
 #Counting the number of months
