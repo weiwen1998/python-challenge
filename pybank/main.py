@@ -1,7 +1,7 @@
 import os
 import csv
 
-csvpath = os.path.join('..','Data Analytics Bootcamp','budget_data.csv')
+csvpath = os.path.join('..','pybank','budget_data.csv')
 
 
 #Counting the number of months
@@ -50,6 +50,7 @@ print(f"Average Change: ${avg_net}\n")
 print(f"Greatest Increase in Profits: {greatinc[0]} ({greatinc[1]})\n")
 print(f"Greatest Decrease in Profits: {greatdec[0]} ({greatdec[1]})\n")
 
+#Writing to CSV file
 pybank_output = os.path.join("Resources", "pybank_output.csv")
 with open(pybank_output, "w") as csvfile:
    csvwriter = csv.writer(csvfile, delimiter=',')
@@ -61,7 +62,7 @@ with open(pybank_output, "w") as csvfile:
    csvwriter.writerow([f"Greatest Increase in Profits: {greatinc}"])
    csvwriter.writerow([f"Greatest Decrease in Profits: {greatdec}"])
 
-
+#Writing to Text File
 pybank_output2 = os.path.join("Analysis", "pybank_output.txt")
 with open(pybank_output2,"w") as txt_file:
     txt_file.write(f"Financial Analysis\n")
