@@ -50,7 +50,7 @@ print(f"Average Change: ${avg_net}\n")
 print(f"Greatest Increase in Profits: {greatinc[0]} ({greatinc[1]})\n")
 print(f"Greatest Decrease in Profits: {greatdec[0]} ({greatdec[1]})\n")
 
-pybank_output = os.path.join("..", "Data Analytics Bootcamp", "pybank_output.csv")
+pybank_output = os.path.join("Resources", "pybank_output.csv")
 with open(pybank_output, "w") as csvfile:
    csvwriter = csv.writer(csvfile, delimiter=',')
    csvwriter.writerow([f"Financial Analysis"])
@@ -58,6 +58,16 @@ with open(pybank_output, "w") as csvfile:
    csvwriter.writerow([f"Total Months: {count}"])
    csvwriter.writerow([f"Total: ${total}"])
    csvwriter.writerow([f"Average  Change: ${avg_net}"])
-   csvwriter.writerow([f"Greatest Increase in Profits: Aug-16 {greatinc}"])
-   csvwriter.writerow([f"Greatest Decrease in Profits: Feb-14 {greatdec}"])
+   csvwriter.writerow([f"Greatest Increase in Profits: {greatinc}"])
+   csvwriter.writerow([f"Greatest Decrease in Profits: {greatdec}"])
 
+
+pybank_output2 = os.path.join("Analysis", "pybank_output.txt")
+with open(pybank_output2,"w") as txt_file:
+    txt_file.write(f"Financial Analysis\n")
+    txt_file.write(f"----------------------------\n")
+    txt_file.write(f"Total Months: {count}\n")
+    txt_file.write(f"Total: ${total}\n")
+    txt_file.write(f"Average  Change: ${avg_net}\n")
+    txt_file.write(f"Greatest Increase in Profits: {greatinc}\n")
+    txt_file.write(f"Greatest Decrease in Profits: {greatdec}\n")
